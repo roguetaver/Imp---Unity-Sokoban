@@ -27,23 +27,31 @@ public class CharacterMovement : MonoBehaviour
         targetPos = this.transform.position;
         moveSpeed = 5f;
         animator = this.GetComponent<Animator>();
+        if(IsPossessed){
+            animator.SetBool("IsPossessed",true);
+        }
+        else{
+            animator.SetBool("IsPossessed",false);
+        }
+        
     }
 
+    public void RemoveSoul(){
+        if(IsPossessed){
+            animator.SetBool("IsPossessed",false);
+            IsPossessed = false;
+        }
+    }
+
+    public void AddSoul(){
+        if(!IsPossessed){
+            animator.SetBool("IsPossessed",true);
+            IsPossessed = true;
+        }
+    }
 
     void Update()
     {
-        if(!IsPossessed && !done){
-            animator.SetBool("IsPossessed",false);
-            done = true;
-            done1 = false;
-        }
-        
-        if(IsPossessed && !done1){
-            done = false;
-            done1 = true;
-            animator.SetBool("IsPossessed",true);
-        }
-
         if(!pauseMenu.gameIsPaused && IsPossessed){
             transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
 

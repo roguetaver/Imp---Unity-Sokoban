@@ -3219,7 +3219,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedDemon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8628971039484633423, guid: 850f74c4d3ba97a4eae06741ae51d871, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 850f74c4d3ba97a4eae06741ae51d871, type: 3}
 --- !u!1 &1994146491
 GameObject:
