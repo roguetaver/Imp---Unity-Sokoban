@@ -17,6 +17,11 @@ public class CharacterMovement : MonoBehaviour
     public bool CanPullLever;
     private Vector2 movement;
     private Animator animator;
+    public bool IsPossessed;
+    private bool done;
+    private bool done1;
+
+
     void Start()
     {
         targetPos = this.transform.position;
@@ -27,8 +32,19 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        if(!pauseMenu.gameIsPaused){
-            
+        if(!IsPossessed && !done){
+            animator.SetBool("IsPossessed",false);
+            done = true;
+            done1 = false;
+        }
+        
+        if(IsPossessed && !done1){
+            done = false;
+            done1 = true;
+            animator.SetBool("IsPossessed",true);
+        }
+
+        if(!pauseMenu.gameIsPaused && IsPossessed){
             transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
 
             movement.x = Input.GetAxisRaw("Horizontal");
