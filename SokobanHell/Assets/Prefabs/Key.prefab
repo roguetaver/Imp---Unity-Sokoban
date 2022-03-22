@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3947815029367117131}
   - component: {fileID: 3947815029367117133}
   - component: {fileID: 3947815029367117134}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,4 +124,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acionantesLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 64

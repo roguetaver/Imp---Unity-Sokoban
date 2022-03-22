@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3144175724888490096}
   - component: {fileID: 3144175724888490097}
   - component: {fileID: 4844450112572100206}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   portaB: {fileID: 0}
   acionantes:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 64
   pisando: 0
 --- !u!61 &3144175724888490097
 BoxCollider2D:

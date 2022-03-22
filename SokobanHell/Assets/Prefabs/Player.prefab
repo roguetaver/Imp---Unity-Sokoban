@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7169114100711041286}
   - component: {fileID: 7169114100711041287}
   - component: {fileID: 7822583798633394080}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -6342241245146142518, guid: 1434a1f5c88430f4c9cad49e47bfbf1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,10 +100,10 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   whatStopsMovement:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 512
   killsPLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1024
   whatYouCanMove:
     serializedVersion: 2
     m_Bits: 128

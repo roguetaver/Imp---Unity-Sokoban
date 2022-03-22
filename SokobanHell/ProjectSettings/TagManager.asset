@@ -11,11 +11,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - WhatCanBeMoved
+  - Key
+  - WhatStopsMovement
+  - Death
   - 
   - 
   - 
