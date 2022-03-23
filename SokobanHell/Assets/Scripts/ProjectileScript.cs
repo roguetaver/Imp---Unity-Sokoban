@@ -25,7 +25,9 @@ public class ProjectileScript : MonoBehaviour
         wallCheckCollision = Physics2D.OverlapCircle(this.transform.position, .2f, whatBreaksProjectile);
 
         if(wallCheckCollision){
-            Destroy(this.gameObject);
+            if(wallCheckCollision.gameObject.tag == "Wall"){
+                Destroy(this.gameObject);
+            } 
         }
 
         playerCheckCollision = Physics2D.OverlapCircle(this.transform.position, .2f, playerLayer);

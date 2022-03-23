@@ -108,7 +108,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   boxCheckCollision: {fileID: 0}
-  CanMoveBox: 1
+  CanMoveBox: 0
   CanPullLever: 1
   IsPossessed: 0
 --- !u!61 &3902376168747257158

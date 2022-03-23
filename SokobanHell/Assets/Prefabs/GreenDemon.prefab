@@ -109,7 +109,7 @@ MonoBehaviour:
     m_Bits: 128
   boxCheckCollision: {fileID: 0}
   CanMoveBox: 1
-  CanPullLever: 1
+  CanPullLever: 0
   IsPossessed: 0
 --- !u!61 &3658272883203005521
 BoxCollider2D:
