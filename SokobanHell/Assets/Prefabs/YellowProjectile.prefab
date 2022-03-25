@@ -101,7 +101,7 @@ MonoBehaviour:
   direction: 
   whatBreaksProjectile:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 640
   playerLayer:
     serializedVersion: 2
     m_Bits: 64

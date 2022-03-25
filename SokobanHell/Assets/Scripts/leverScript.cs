@@ -38,28 +38,28 @@ public class leverScript : MonoBehaviour
         acionantesLeft= Physics2D.OverlapCircle(collisionLeft, .2f , acionantes);
 
         if(acionantesUp){
-            if(acionantesUp.transform.gameObject.tag == "Player"){
+            if(acionantesUp.transform.gameObject.tag == "PurpleDemon"){
                 if(acionantesUp.transform.gameObject.GetComponent<CharacterMovement>().CanPullLever){
                     pisando = true;
                 }
             }
         }
         else if(acionantesDown){
-            if(acionantesDown.transform.gameObject.tag == "Player"){
+            if(acionantesDown.transform.gameObject.tag == "PurpleDemon"){
                 if(acionantesDown.transform.gameObject.GetComponent<CharacterMovement>().CanPullLever){
                     pisando = true;
                 }
             }
         }
         else if(acionantesRight){
-            if(acionantesRight.transform.gameObject.tag == "Player"){
+            if(acionantesRight.transform.gameObject.tag == "PurpleDemon"){
                 if(acionantesRight.transform.gameObject.GetComponent<CharacterMovement>().CanPullLever){
                     pisando = true;
                 }
             }
         }
         else if(acionantesLeft){
-            if(acionantesLeft.transform.gameObject.tag == "Player"){
+            if(acionantesLeft.transform.gameObject.tag == "PurpleDemon"){
                 if(acionantesLeft.transform.gameObject.GetComponent<CharacterMovement>().CanPullLever){
                     pisando = true;
                 }
