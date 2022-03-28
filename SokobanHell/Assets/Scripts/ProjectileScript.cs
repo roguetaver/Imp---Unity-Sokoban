@@ -43,15 +43,19 @@ public class ProjectileScript : MonoBehaviour
 
         if(direction == "Up"){
             directionVector = new Vector3(0,1,0);
+            transform.rotation = Quaternion.Euler(0, 0, 90);
         }
         else if (direction == "Right"){
             directionVector = new Vector3(1,0,0);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else if (direction == "Left"){
             directionVector = new Vector3(-1,0,0);
+            transform.rotation = Quaternion.Euler(0, 0, 180);
         }
         else if (direction == "Down"){
             directionVector = new Vector3(0,-1,0);
+            transform.rotation = Quaternion.Euler(0, 0, 270);
         }
         else{
             directionVector = new Vector3(0,0,0);
