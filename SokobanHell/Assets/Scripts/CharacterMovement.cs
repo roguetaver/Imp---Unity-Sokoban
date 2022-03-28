@@ -12,6 +12,7 @@ public class CharacterMovement : MonoBehaviour
     public LayerMask killsPLayer;
     public LayerMask whatYouCanMove;
     public Collider2D boxCheckCollision;
+    public Collider2D boxOnGate;
     private GameObject box;
     public bool CanMoveBox;
     public bool CanPullLever;
@@ -25,7 +26,7 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         targetPos = this.transform.position;
-        moveSpeed = 5f;
+        moveSpeed = 4.5f;
         animator = this.GetComponent<Animator>();
         if(IsPossessed){
             animator.SetBool("IsPossessed",true);
@@ -62,16 +63,17 @@ public class CharacterMovement : MonoBehaviour
             animator.SetFloat("Speed",movement.sqrMagnitude);
 
 
-            if (transform.position == targetPos){
+            if (this.transform.position == targetPos){
                 //===============================================================================================================
                 //movimento horizontal
                 //===============================================================================================================
                 if (Math.Abs(Input.GetAxisRaw("Horizontal")) == 1f && (Math.Abs(Input.GetAxisRaw("Vertical")) == 0f)){
 
                     boxCheckCollision = Physics2D.OverlapCircle(targetPos + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, whatYouCanMove);
+                    boxOnGate = Physics2D.OverlapCircle(targetPos + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, whatStopsMovement);
                     
                     //se houver uma caixa na direção em que o char pretende se mover
-                    if (boxCheckCollision != null && CanMoveBox)
+                    if (boxCheckCollision != null && CanMoveBox && boxOnGate == null)
                     {
                         //se não houver parede na direção em que a caixa vai ser movida
                         //se não houver outra caixa na direção em que a caixa vai ser movida
@@ -98,9 +100,10 @@ public class CharacterMovement : MonoBehaviour
                 {
 
                     boxCheckCollision = Physics2D.OverlapCircle(targetPos + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, whatYouCanMove);
+                    boxOnGate = Physics2D.OverlapCircle(targetPos + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, whatStopsMovement);
                     
                     //se houver uma caixa na direção em que o char pretende se mover
-                    if (boxCheckCollision != null && CanMoveBox)
+                    if (boxCheckCollision != null && CanMoveBox && boxOnGate == null)
                     {
                         //se não houver parede na direção em que a caixa vai ser movida
                         //se não houver outra caixa na direção em que a caixa vai ser movida

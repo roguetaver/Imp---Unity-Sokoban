@@ -8,6 +8,8 @@ TagManager:
   - PurpleDemon
   - RedDemon
   - Wall
+  - Undefined
+  - WhatCanBeMoved
   layers:
   - Default
   - TransparentFX

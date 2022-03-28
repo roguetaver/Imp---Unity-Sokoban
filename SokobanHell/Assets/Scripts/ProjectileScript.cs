@@ -25,7 +25,7 @@ public class ProjectileScript : MonoBehaviour
         wallCheckCollision = Physics2D.OverlapCircle(this.transform.position, .2f, whatBreaksProjectile);
 
         if(wallCheckCollision){
-            if(wallCheckCollision.gameObject.tag == "Wall"){
+            if(wallCheckCollision.gameObject.tag == "Wall" || wallCheckCollision.gameObject.tag == "WhatCanBeMoved"){
                 Destroy(this.gameObject);
             } 
         }
