@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4844450112572100206}
   m_Layer: 9
   m_Name: Lever
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: d572ebf2ed737db4aaae5c90f2c21bde, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 7c952a8f3985a4044b3f49a0dbd5fb90, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f3e2ec1cfa340b14dac2e66d37c97124, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

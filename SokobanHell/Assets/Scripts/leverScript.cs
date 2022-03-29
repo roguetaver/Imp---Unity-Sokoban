@@ -36,32 +36,43 @@ public class leverScript : MonoBehaviour
         acionantesDown= Physics2D.OverlapCircle(collisionDown, .2f , acionantes);
         acionantesRight= Physics2D.OverlapCircle(collisionRight, .2f , acionantes);
         acionantesLeft= Physics2D.OverlapCircle(collisionLeft, .2f , acionantes);
-
         if(acionantesUp){
             if(acionantesUp.transform.gameObject.tag == "PurpleDemon"){
-                if(acionantesUp.transform.gameObject.GetComponent<CharacterMovement>().CanPullLever){
+                if(acionantesUp.transform.gameObject.GetComponent<CharacterMovement>().CanPullLever && acionantesUp.transform.gameObject.GetComponent<CharacterMovement>().IsPossessed){
                     pisando = true;
+                }
+                else{
+                    pisando = false;
                 }
             }
         }
         else if(acionantesDown){
-            if(acionantesDown.transform.gameObject.tag == "PurpleDemon"){
-                if(acionantesDown.transform.gameObject.GetComponent<CharacterMovement>().CanPullLever){
+            if(acionantesDown.transform.gameObject.tag == "PurpleDemon" ){
+                if(acionantesDown.transform.gameObject.GetComponent<CharacterMovement>().CanPullLever && acionantesDown.transform.gameObject.GetComponent<CharacterMovement>().IsPossessed){
                     pisando = true;
+                }
+                else{
+                    pisando = false;
                 }
             }
         }
         else if(acionantesRight){
             if(acionantesRight.transform.gameObject.tag == "PurpleDemon"){
-                if(acionantesRight.transform.gameObject.GetComponent<CharacterMovement>().CanPullLever){
+                if(acionantesRight.transform.gameObject.GetComponent<CharacterMovement>().CanPullLever && acionantesRight.transform.gameObject.GetComponent<CharacterMovement>().IsPossessed){
                     pisando = true;
+                }
+                else{
+                    pisando = false;
                 }
             }
         }
         else if(acionantesLeft){
             if(acionantesLeft.transform.gameObject.tag == "PurpleDemon"){
-                if(acionantesLeft.transform.gameObject.GetComponent<CharacterMovement>().CanPullLever){
+                if(acionantesLeft.transform.gameObject.GetComponent<CharacterMovement>().CanPullLever && acionantesLeft.transform.gameObject.GetComponent<CharacterMovement>().IsPossessed){
                     pisando = true;
+                }
+                else{
+                    pisando = false;
                 }
             }
         }

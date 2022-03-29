@@ -30,7 +30,7 @@ public class LevelSelectManager : MonoBehaviour
 
     void Update()
     {
-        if((Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp(KeyCode.Space)) && charGameObject.GetComponent<LevelSelectCharMovement>().alreadyMoved){
+        if((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) && charGameObject.GetComponent<LevelSelectCharMovement>().alreadyMoved){
             SceneManager.LoadScene(charGameObject.GetComponent<LevelSelectCharMovement>().currentLevel + 1);
         }
     }

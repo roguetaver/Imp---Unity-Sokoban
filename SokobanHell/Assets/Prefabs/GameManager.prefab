@@ -60,8 +60,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fm: {fileID: 0}
   audioClipList:
-  - {fileID: 8300000, guid: 0d4460d08cd6f3140b7fc232e75d564a, type: 3}
-  - {fileID: 8300000, guid: 0a82470e8afc2e74e8aac4331364dd76, type: 3}
+  - {fileID: 8300000, guid: 9e5660e8dcc26244fa00060c86a668c2, type: 3}
+  - {fileID: 8300000, guid: ebc4d4d7a26c4aa48aee2299cb7e0343, type: 3}
 --- !u!82 &-7153744296714122454
 AudioSource:
   m_ObjectHideFlags: 0

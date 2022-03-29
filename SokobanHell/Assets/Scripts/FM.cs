@@ -19,7 +19,7 @@ public class FM : MonoBehaviour
     }
 
     public void SaveData(){
-        level = SceneManager.GetActiveScene().buildIndex - 1;
+        level = SceneManager.GetActiveScene().buildIndex ;
         SaveSystem.Save(this);
     }
 

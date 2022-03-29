@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public FM fm;
     private AudioSource audioS; 
     public AudioClip[] audioClipList;
+    private bool done;
 
     void Start()
     {
@@ -27,13 +28,17 @@ public class LevelManager : MonoBehaviour
     public void ResetLevel()
     {
         audioS.clip = audioClipList[1];
-        audioS.Play();
+       
+        if(!done){
+            audioS.Play();
+            done = true;
+        }
         StartCoroutine(ResetLevelAfterSec(0.5f));
     }
 
     public void LoadNextLevel()
     {
-        if (SceneManager.GetActiveScene().buildIndex - 1 > fm.level){
+        if (SceneManager.GetActiveScene().buildIndex  > fm.level){
             fm.SaveData();
         }
         audioS.clip = audioClipList[0];

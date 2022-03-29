@@ -11,8 +11,10 @@ public class CharacterMovement : MonoBehaviour
     public LayerMask whatStopsMovement;
     public LayerMask killsPLayer;
     public LayerMask whatYouCanMove;
+    public LayerMask deathLayer;
     public Collider2D boxCheckCollision;
     public Collider2D boxOnGate;
+    public Collider2D deathCollision;
     private GameObject box;
     public bool CanMoveBox;
     public bool CanPullLever;
@@ -21,10 +23,12 @@ public class CharacterMovement : MonoBehaviour
     public bool IsPossessed;
     private bool done;
     private bool done1;
+    private GameObject gameManager;
 
 
     void Start()
     {
+        gameManager = GameObject.Find("GameManager");
         targetPos = this.transform.position;
         moveSpeed = 4.5f;
         animator = this.GetComponent<Animator>();
@@ -53,6 +57,13 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
+        deathCollision = Physics2D.OverlapCircle(this.transform.position, .2f, deathLayer);
+
+        if(deathCollision){
+            gameManager.GetComponent<LevelManager>().ResetLevel();
+        }
+
+
         if(!pauseMenu.gameIsPaused && IsPossessed){
             transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
 

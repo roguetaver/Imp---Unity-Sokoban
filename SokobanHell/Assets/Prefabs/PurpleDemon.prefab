@@ -107,7 +107,12 @@ MonoBehaviour:
   whatYouCanMove:
     serializedVersion: 2
     m_Bits: 128
+  deathLayer:
+    serializedVersion: 2
+    m_Bits: 512
   boxCheckCollision: {fileID: 0}
+  boxOnGate: {fileID: 0}
+  deathCollision: {fileID: 0}
   CanMoveBox: 0
   CanPullLever: 1
   IsPossessed: 0
